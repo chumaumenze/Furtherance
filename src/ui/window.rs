@@ -185,9 +185,8 @@ impl FurtheranceWindow {
         }
 
         // Development mode
-        if config::PROFILE == "development" {
-            self.add_css_class("devel");
-        }
+        #[cfg(debug_assertions)]
+        self.add_css_class("devel");
 
         *imp.pomodoro_continue.lock().unwrap() = false;
         imp.start_button.set_sensitive(false);

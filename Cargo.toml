@@ -30,3 +30,6 @@ version = "0.7.3"
 package = "libadwaita"
 version = "0.5.3"
 features = ["v1_2"]
+
+[build-dependencies]
+glib-build-tools = "0.18.0"

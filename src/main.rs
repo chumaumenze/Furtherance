@@ -22,7 +22,7 @@ mod ui;
 
 use self::application::FurtheranceApplication;
 
-use config::{APP_ID, GETTEXT_PACKAGE, LOCALEDIR, PKGDATADIR};
+use config::{APP_ID, GETTEXT_PACKAGE, LOCALEDIR};
 use gettextrs::{bind_textdomain_codeset, bindtextdomain, textdomain};
 use gtk::prelude::*;
 use gtk::{gio, glib};
@@ -40,9 +40,8 @@ fn main() {
     textdomain(GETTEXT_PACKAGE).expect("Unable to switch to the text domain");
 
     // Load resources
-    let resources = gio::Resource::load(PKGDATADIR.to_owned() + "/furtherance.gresource")
-        .expect("Could not load resources");
-    gio::resources_register(&resources);
+    gio::resources_register_include!("furtherance.gresource")
+        .expect("Failed to register resources.");
 
     // Create a new GtkApplication. The application manages our main loop,
     // application windows, integration with the window manager/compositor, and

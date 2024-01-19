@@ -278,7 +278,7 @@ dependencies = [
 
 [[package]]
 name = "furtherance"
-version = "1.8.1"
+version = "1.8.2"
 dependencies = [
  "anyhow",
  "chrono",
@@ -288,6 +288,7 @@ dependencies = [
  "dbus-codegen",
  "directories",
  "gettext-rs",
+ "glib-build-tools",
  "gtk4",
  "gtk4-macros",
  "itertools",
@@ -506,6 +507,12 @@ dependencies = [
  "smallvec",
  "thiserror",
 ]
+
+[[package]]
+name = "glib-build-tools"
+version = "0.18.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "3431c56f463443cba9bc3600248bc6d680cb614c2ee1cdd39dab5415bd12ac5c"
 
 [[package]]
 name = "glib-macros"
