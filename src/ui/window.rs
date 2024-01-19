@@ -33,7 +33,6 @@ use std::rc::Rc;
 use std::sync::Mutex;
 use std::time::Duration;
 
-use crate::config;
 use crate::database::{self, SortOrder, TaskSort};
 use crate::settings_manager;
 use crate::ui::FurHistoryBox;

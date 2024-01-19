@@ -1,6 +1,7 @@
 [package]
 name = "furtherance"
 version = "1.8.2"
+description = "Track your time without being tracked."
 authors = ["Ricky Kresslein <ricky@unobserved.io>"]
 edition = "2021"
 
@@ -33,3 +34,31 @@ features = ["v1_2"]
 
 [build-dependencies]
 glib-build-tools = "0.18.0"
+
+[package.metadata.bundle]
+name = "Furtherance"
+identifier = "com.lakoliu.Furtherance"
+icon = [
+#    "32x32.png",
+#    "128x128.png",
+#    "128x128@2x.png"
+    "data/icons/pngs/64x64.png",
+    "data/icons/pngs/128x128.png",
+    "data/icons/pngs/256x256.png"
+]
+#version = "1.0.0"
+resources = ["assets", "images/**/*.png", "secrets/public_key.txt"]
+copyright = "Copyright (c) Jane Doe 2016. All rights reserved."
+category = "Utility"
+short_description = "Track your time without being tracked."
+long_description = """
+Track your time without being tracked.
+"""
+deb_depends = [
+    "glib-2.0 (>= 2.66)",
+    "gio-2.0 (>= 2.66)",
+    "gtk4 (>= 4.0.0)",
+    "libadwaita-1 (>=1.0.0)"
+]
+#osx_frameworks = ["SDL2"]
+#osx_url_schemes = []

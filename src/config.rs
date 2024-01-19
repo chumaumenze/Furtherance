@@ -17,5 +17,4 @@
 pub static VERSION: &str = env!("CARGO_PKG_VERSION");
 pub static GETTEXT_PACKAGE: &str = env!("CARGO_PKG_NAME");
 pub static LOCALEDIR: &str = "/usr/local/share/locale";
-// pub static PKGDATADIR: &str = "/usr/local/share/furtherance";
 pub static APP_ID: &str = "com.lakoliu.Furtherance";
